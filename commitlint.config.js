@@ -33,7 +33,7 @@ module.exports = {
         "test",
       ],
     ],
-    "scope-empty": [2, "always"],
+    "scope-empty": [2, "never"],
     "scope-enum": [
       2,
       "always",
@@ -50,6 +50,7 @@ module.exports = {
     ],
   },
   prompt: {
+    settings: { enableMultipleScopes: true },
     questions: {
       type: {
         description: "Select the type of change that you're committing",
@@ -118,6 +119,28 @@ module.exports = {
       scope: {
         description:
           "What is the scope of this change (e.g. component or file name)",
+        enum: {
+          manage: {
+            description: "Internal",
+            title: "Manage",
+            emoji: "🧠",
+          },
+          app: {
+            description: "Eksternal",
+            title: "AsiaCommerce App",
+            emoji: "🧠",
+          },
+          seller: {
+            description: "Eksternal",
+            title: "AsiaCommerce Seller Center",
+            emoji: "🧠",
+          },
+          native: {
+            description: "Eksternal",
+            title: "AsiaCommerce Native Store",
+            emoji: "🧠",
+          },
+        },
       },
       subject: {
         description:
