@@ -7,7 +7,8 @@
     "test": "echo \"Tests success\"",
     "test:error": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "commit:hook": "git cz --hook || true"
   },
   "config": {
     "commitizen": {

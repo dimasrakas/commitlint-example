@@ -34,23 +34,10 @@ module.exports = {
       ],
     ],
     "scope-empty": [2, "never"],
-    "scope-enum": [
-      2,
-      "always",
-      [
-        "manage",
-        "app",
-        "seller",
-        "native",
-        "@asiacommerce/ui",
-        "turborepo",
-        "dependencies",
-        "configuration",
-      ],
-    ],
+    "scope-enum": [2, "always", ["module1", "module2", "module3"]],
   },
   prompt: {
-    settings: { enableMultipleScopes: true },
+    settings: { enableMultipleScopes: false, scopeEnumSeparator: "," },
     questions: {
       type: {
         description: "Select the type of change that you're committing",
@@ -120,24 +107,19 @@ module.exports = {
         description:
           "What is the scope of this change (e.g. component or file name)",
         enum: {
-          manage: {
-            description: "Internal",
-            title: "Manage",
+          module1: {
+            description: "Example Module 1",
+            title: "Module 1",
             emoji: "🧠",
           },
-          app: {
-            description: "Eksternal",
-            title: "AsiaCommerce App",
+          module2: {
+            description: "Example Module 2",
+            title: "Module 2",
             emoji: "🧠",
           },
-          seller: {
-            description: "Eksternal",
-            title: "AsiaCommerce Seller Center",
-            emoji: "🧠",
-          },
-          native: {
-            description: "Eksternal",
-            title: "AsiaCommerce Native Store",
+          module3: {
+            description: "Example Module 3",
+            title: "Module 3",
             emoji: "🧠",
           },
         },
