@@ -1,14 +1,21 @@
 {
   "name": "commitlint-learn",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "private": true,
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
+  },
   "scripts": {
     "test": "echo \"Tests success\"",
     "test:error": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
     "commit": "git-cz",
-    "commit:hook": "git cz --hook || true"
+    "commit:hook": "git cz --hook || true",
+    "semantic-release": "semantic-release"
   },
   "config": {
     "commitizen": {
@@ -30,6 +37,11 @@
     "@commitlint/prompt-cli": "^16.2.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimasrakas/commitlint-example.git"
   }
 }
